@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YouMerch - Sports Section</title>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+    <link rel="shortcut icon" href="https://iconsplace.com/wp-content/uploads/_icons/ff0000/256/png/play-icon-14-256.png" type="img/icon">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Favicons -->
+	<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+	<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+	<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+	<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+	<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+	<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#563d7c">
+
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebas" type="text/css">
+
+	<style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      #productImage {
+        height: 200px;
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 10%;
+        object-fit: cover;
+      }
+
+      #specialImage {
+        height: 250px;
+        width: 250px;
+        margin: 0 auto;
+        object-fit: cover;
+      }
+
+      .jumbotron {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        margin-bottom: 0;
+        background-color: #fff;
+      }
+      @media (min-width: 768px) {
+        .jumbotron {
+          padding-top: 6rem;
+          padding-bottom: 6rem;
+        }
+      }
+
+      .jumbotron p:last-child {
+        margin-bottom: 0;
+      }
+
+      .jumbotron h1 {
+        font-weight: 300;
+      }
+
+      .jumbotron .container {
+        max-width: 40rem;
+      }
+
+      footer {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+
+      footer p {
+        margin-bottom: .25rem;
+      }
+
+      hr {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        border: 0;
+        border-top: 1px solid white;
+      }
+
+      .top-right {
+        color: black;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
+
+      .top-left {
+        color: red;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+      }
+
+      input#searchbar:hover {
+          -webkit-transition: width 1s ease-in-out;
+          -moz-transition: width 1s ease-in-out;
+          -o-transition: width 1s ease-in-out;
+          transition: width 1s ease-in-out;
+
+          width: 350px !important;
+      }
+
+      nav {
+        box-sizing: border-box !important;
+      }
+
+      .form-control {
+        border: 1px solid black;
+        opacity: 0;
+      }
+
+      .form-control:focus {
+        border: 1px solid black;
+        box-shadow: none;
+        opacity: 0;
+      }
+
+      * {
+        box-sizing: content-box;
+      }
+
+      .rainbow-bg{
+          animation: rainbow-bg 2.5s linear;
+          animation-iteration-count: infinite;
+      }
+
+      .rainbow{
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        /*font-size: 25px;*/
+          animation: rainbow 2.5s linear;
+          animation-iteration-count: infinite;
+      }
+
+      @keyframes rainbow-bg{
+          100%,0%{
+            background-color: rgb(255,0,0);
+          }
+          8%{
+            background-color: rgb(255,127,0);
+          }
+          16%{
+            background-color: rgb(255,255,0);
+          }
+          25%{
+            background-color: rgb(127,255,0);
+          }
+          33%{
+            background-color: rgb(0,255,0);
+          }
+          41%{
+            background-color: rgb(0,255,127);
+          }
+          50%{
+            background-color: rgb(0,255,255);
+          }
+          58%{
+            background-color: rgb(0,127,255);
+          }
+          66%{
+            background-color: rgb(0,0,255);
+          }
+          75%{
+            background-color: rgb(127,0,255);
+          }
+          83%{
+            background-color: rgb(255,0,255);
+          }
+          91%{
+            background-color: rgb(255,0,127);
+          }
+      }
+
+      @keyframes rainbow{
+          100%,0%{
+            color: rgb(255,0,0);
+          }
+          8%{
+            color: rgb(255,127,0);
+          }
+          16%{
+            color: rgb(255,255,0);
+          }
+          25%{
+            color: rgb(127,255,0);
+          }
+          33%{
+            color: rgb(0,255,0);
+          }
+          41%{
+            color: rgb(0,255,127);
+          }
+          50%{
+            color: rgb(0,255,255);
+          }
+          58%{
+            color: rgb(0,127,255);
+          }
+          66%{
+            color: rgb(0,0,255);
+          }
+          75%{
+            color: rgb(127,0,255);
+          }
+          83%{
+            color: rgb(255,0,255);
+          }
+          91%{
+            color: rgb(255,0,127);
+          }
+      }
+
+      @media only screen and (max-width: 600px) {
+          #bner {
+            width: 105% !important;
+            margin-top: -16.75% !important;
+            margin-left: -4.5% !important;
+          }
+
+          #logo {
+            height: 6.5%;
+          }
+
+          #hnm {
+            font-size: 1.5rem !important;
+          }
+
+          .card.mb-4.shadow-sm {
+            width: 175px !important;
+            height: 175px !important;
+          }
+
+          #specialImage {
+            width: 175px !important;
+            height: 175px !important;
+          }
+
+          #productImage {
+            width: 175px !important;
+            height: 150px !important;
+          }
+
+          #hotCards {
+            width: 80%;
+            margin: auto !important;
+          }
+
+          #btt {
+            margin-left: -40% !important;
+          }
+
+          .top-left {
+            font-size: 12px;
+          }
+
+          .top-right {
+            font-size: 12px;
+          }
+
+          .popmerch {
+            margin: 0px 0px 20px 20% !important;
+          }
+      }
+
+      #navthingactive {
+        color: black !important;
+      }
+
+      #navthing {
+        color: rgba(185, 185, 185) !important;
+      }
+
+      @media only screen and (max-width: 715px) {
+        .form-control.mr-sm-2 {
+          display: none;
+        }
+
+        .navbar-nav.mr-auto {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body onload="addHotDeals();">
+    <header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-red">
+      <a class="nav-link" id="navthing" href="index.html">Home</a>
+      <a class="nav-link" id="navthing" href="gaming.html">Gaming</a>
+      <a class="nav-link" id="navthing" href="sports.html">Sports</a>
+      <a class="nav-link" id="navthingactive" href="rap.html">Rap</a>
+      <a class="nav-link" id="navthing" href="vlog.html">Vloggers</a>
+
+      <ul class="navbar-nav mr-auto"></ul>
+        
+      <div class="form-control mr-sm-2" style="width: 250px; height: calc(1.5em + .75rem + 2px) !important;"></div>
+    </nav><hr style="padding: 0px;">
+</head>
+<body>
+
+<div class="album py-5 bg-light">
+    <div class="container" id="hotcards">
+      <h1 class="popmerch" style="font-family: 'BebasNeueRegular', serif; font-style: normal; font-weight: normal;">Popular Rap Merch</h1><br>
+      <div class="row" id="row1"></div>
+      <div class="row" id="row2"></div>
+    </div>
+  </div>
+
+<script type="text/javascript">
+  var hotImages = ["https://merchbar.imgix.net/product/0/7957/4406979199089/XEXfJcXRv1-2_9c9e23ec-32ca-4acd-98ed-074b6af91ab4.png?w=640&h=640", "https://merchbar.imgix.net/product/105/6519/4352790757458/Q1h8WgsV25w_bd5dab7c-8d83-46ff-b5df-608381a72791.png?w=640&h=640", "https://merchbar.imgix.net/product/70/7233/1116761/YfK13hwTqrsocks_1.png?w=640&h=640", "https://merchbar.imgix.net/product/0/7209/4345906331684/bfXvFlhttrapTEE-1.png?w=640&h=640", "https://merchbar.imgix.net/product/70/7848/1121142/Vo4uyX4Droddyblacknewhoodieback.png?w=640&h=640", "", "https://img.secure.cdn2.wmgecom.com/media/catalog/product/cache/864/image/600x/9df78eab33525d08d6e5fb8d27136e95/1/_/1_13_13.jpg", "https://static.musictoday.com/store/bands/4365/product_600/X9CMYT10.jpg"];
+  var specialHot = ["", "", "", "", "", "https://merchbar.imgix.net/product/43/8130/x9ctgn09/MVgm1MqLX9CTGN09-01.JPG?w=640&h=640", "", ""];
+  var hotPrices = ["$31.50", "$26.95", "$20.00", "$25.00", "$50.00", "$45.00", "$25.00", "$65.00"];
+  var hotLinks = ["https://www.merchbar.com/r-b-hiphop-rap/rich-the-kid/rich-the-kid-red-splatter-t-shirt", "https://www.merchbar.com/r-b-hiphop-rap/lil-yachty/lil-yachty-long-sleeve-shirt-king-boat-lil-yachty-long-sleeve-shirt", "https://www.merchbar.com/r-b-hiphop-rap/quando-rondo/quando-rondo-qr-nh-initial-socks", "https://www.merchbar.com/vinyl-records/fetty-wap/fetty-wap-trap-tee", "https://www.merchbar.com/r-b-hiphop-rap/roddy-ricch/roddy-ricch-please-excuse-me-hoodie-black", "https://www.merchbar.com/r-b-hiphop-rap/gunna/gunna-ombre-birth-chart-t-shirt", "https://store.warnermusic.com/atlantic-records/artists/gucci-mane/evil-caricature-hat.html", "https://youngthugstore.com/product/X9CMYT10/2020-stay-home-tour-green-hoodie?cp=null"];
+  var brands = ["Rich The Kid", "Lil Yachty", "Quando Rondo", "Fetty Wap", "Roddy Ricch", "Gunna", "Gucci Mane", "Young Thug"];
+  var bgColors = ["", "", "", "", "", "", "", ""];
+  var textColors = ["220,20,60", "212,175,55", "30,144,255", "135,136,140", "0,0,0", "126,72,94", "", "154, 210, 130"];
+
+  function addHotDeals() {
+    for (var i = 0; i < hotPrices.length; i++) {
+      var url = hotImages[i];
+
+      if (url == "") {
+        url = specialHot[i];
+
+        var price = hotPrices[i];
+        var brand = brands[i];
+        var bgColor = bgColors[i];
+        var textColor = textColors[i];
+
+        var code = `<a href="` + hotLinks[i] + `"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + bgColor + `);">
+                <div class="top-right"><strong>` + price + `</strong></div>
+                <div class="top-left" style="color: rgba(` + textColor + `);"><strong>` + brand + `</strong></div>
+                <img src="` + url + `" id="specialImage">
+              </div>
+          </div></a>`;
+
+        if (brand == "PewDiePie") {
+          code = `<a href="` + hotLinks[i] + `"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + bgColor + `);">
+                <div class="top-right"><strong>` + price + `</strong></div>
+                <div class="demo rainbow"><strong>` + brand + `</strong></div>
+                <img style="border-radius: 15px;" src="` + url + `" id="specialImage">
+              </div>
+          </div></a>`;
+        } else if (brand == "KSI") {
+          code = `<a href="` + hotLinks[i] + `"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + bgColor + `);">
+                <div class="top-right" style="color: red !important;"><strong>` + price + `</strong></div>
+                <div class="top-left" style="color: rgba(` + textColor + `);"><strong>` + brand + `</strong></div>
+                <img src="` + url + `" id="specialImage">
+              </div>
+          </div></a>`;
+        }
+
+        if (i < 4) {
+          document.getElementById('row1').innerHTML = document.getElementById('row1').innerHTML + code;
+        } else if (i < 8) {
+          document.getElementById('row2').innerHTML = document.getElementById('row2').innerHTML + code
+        } else {
+          document.getElementById('row3').innerHTML = document.getElementById('row3').innerHTML + code
+        }
+      } else {
+        var price = hotPrices[i];
+        var brand = brands[i];
+        var bgColor = bgColors[i];
+        var textColor = textColors[i];
+
+        var code = `<a href="` + hotLinks[i] + `"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + bgColor + `);">
+                <div class="top-right"><strong>` + price + `</strong></div>
+                <div class="top-left" style="color: rgba(` + textColor + `);"><strong>` + brand + `</strong></div>
+                <img src="` + url + `" id="productImage">
+              </div>
+          </div></a>`;
+
+        if (brand == "PewDiePie") {
+          code = `<a href="` + hotLinks[i] + `"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + bgColor + `);">
+                <div class="top-right"><strong>` + price + `</strong></div>
+                <div class="demo rainbow"><strong>` + brand + `</strong></div>
+                <img style="border-radius: 15px;" src="` + url + `" id="specialImage">
+              </div>
+          </div></a>`;
+        } else if (brand == "KSI") {
+          code = `<a href="` + hotLinks[i] + `"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + bgColor + `);">
+                <div class="top-right" style="color: red !important;"><strong>` + price + `</strong></div>
+                <div class="top-left" style="color: rgba(` + textColor + `);"><strong>` + brand + `</strong></div>
+                <img src="` + url + `" id="specialImage">
+              </div>
+          </div></a>`;
+        }
+
+        if (i < 4) {
+          document.getElementById('row1').innerHTML = document.getElementById('row1').innerHTML + code;
+        } else if (i < 8) {
+          document.getElementById('row2').innerHTML = document.getElementById('row2').innerHTML + code
+        } else {
+          document.getElementById('row3').innerHTML = document.getElementById('row3').innerHTML + code
+        }
+      }
+    }
+  }
+</script>
+
+<footer class="text-muted" style="background-color: rgba(248, 249, 250);">
+  <div class="container">
+    <p style="color: black;">© Ethan Goodhart, Graham Goodhart</p>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+</body>
+</html>

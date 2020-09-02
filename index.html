@@ -1,0 +1,772 @@
+<html lang="en"><head>
+    <title>YouMerch - Home</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+      input#searchbar:hover {
+        -webkit-transition: width 1s ease-in-out;
+        -moz-transition: width 1s ease-in-out;
+        -o-transition: width 1s ease-in-out;
+        transition: width 1s ease-in-out;
+
+        width: 350px !important;
+      }
+
+      body {
+        position:relative;
+        background-color: rgba(248, 249, 250);
+        /*transform: scale(1.1);*/
+        /*transform-origin: 0 0;*/
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      #productImage {
+        height: 200px;
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 10%;
+        object-fit: cover;
+      }
+
+      #specialImage {
+        height: 250px;
+        width: 250px;
+        margin: 0 auto;
+        object-fit: cover;
+      }
+
+      .jumbotron {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        margin-bottom: 0;
+        background-color: #fff;
+      }
+      @media (min-width: 768px) {
+        .jumbotron {
+          padding-top: 6rem;
+          padding-bottom: 6rem;
+        }
+      }
+
+      .jumbotron p:last-child {
+        margin-bottom: 0;
+      }
+
+      .jumbotron h1 {
+        font-weight: 300;
+      }
+
+      .jumbotron .container {
+        max-width: 40rem;
+      }
+
+      footer {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+
+      footer p {
+        margin-bottom: .25rem;
+      }
+
+      hr {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        border: 0;
+        border-top: 1px solid white;
+      }
+
+      .top-right {
+        color: black;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
+
+      .top-left {
+        color: red;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+      }
+
+      nav {
+        box-sizing: border-box !important;
+      }
+
+      .form-control {
+        border: 0px solid white;
+      }
+
+      .form-control:focus {
+        border: 0px solid white;
+        box-shadow: none;
+      }
+
+      * {
+        box-sizing: content-box;
+      }
+
+      .rainbow-bg{
+          animation: rainbow-bg 2.5s linear;
+          animation-iteration-count: infinite;
+      }
+
+      .rainbow{
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        /*font-size: 25px;*/
+          animation: rainbow 2.5s linear;
+          animation-iteration-count: infinite;
+      }
+
+      @keyframes rainbow-bg{
+          100%,0%{
+            background-color: rgb(255,0,0);
+          }
+          8%{
+            background-color: rgb(255,127,0);
+          }
+          16%{
+            background-color: rgb(255,255,0);
+          }
+          25%{
+            background-color: rgb(127,255,0);
+          }
+          33%{
+            background-color: rgb(0,255,0);
+          }
+          41%{
+            background-color: rgb(0,255,127);
+          }
+          50%{
+            background-color: rgb(0,255,255);
+          }
+          58%{
+            background-color: rgb(0,127,255);
+          }
+          66%{
+            background-color: rgb(0,0,255);
+          }
+          75%{
+            background-color: rgb(127,0,255);
+          }
+          83%{
+            background-color: rgb(255,0,255);
+          }
+          91%{
+            background-color: rgb(255,0,127);
+          }
+      }
+
+      @keyframes rainbow{
+          100%,0%{
+            color: rgb(255,0,0);
+          }
+          8%{
+            color: rgb(255,127,0);
+          }
+          16%{
+            color: rgb(255,255,0);
+          }
+          25%{
+            color: rgb(127,255,0);
+          }
+          33%{
+            color: rgb(0,255,0);
+          }
+          41%{
+            color: rgb(0,255,127);
+          }
+          50%{
+            color: rgb(0,255,255);
+          }
+          58%{
+            color: rgb(0,127,255);
+          }
+          66%{
+            color: rgb(0,0,255);
+          }
+          75%{
+            color: rgb(127,0,255);
+          }
+          83%{
+            color: rgb(255,0,255);
+          }
+          91%{
+            color: rgb(255,0,127);
+          }
+      }
+
+      #fadeInView {
+        animation: fadeIn ease 2s;
+        -webkit-animation: fadeIn ease 2s;
+      }
+
+      @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+
+      @-moz-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+
+      @-webkit-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+
+      @-o-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+
+      #navthingactive {
+        color: white !important;
+      }
+
+      #navthing {
+        color: #ffffff99 !important;
+      }
+
+      @media only screen and (max-width: 600px) {
+          #bner {
+            width: 105% !important;
+            margin-top: -16.75% !important;
+            margin-left: -4.5% !important;
+          }
+
+          #logo {
+            height: 6.5%;
+          }
+
+          #hnm {
+            font-size: 1.5rem !important;
+          }
+
+          .card.mb-4.shadow-sm {
+            width: 175px !important;
+            height: 175px !important;
+          }
+
+          #specialImage {
+            width: 175px !important;
+            height: 175px !important;
+          }
+
+          #productImage {
+            width: 175px !important;
+            height: 150px !important;
+          }
+
+          #hotCards {
+            width: 80%;
+            margin: auto !important;
+          }
+
+          #btt {
+            margin-left: -40% !important;
+          }
+
+          .top-left {
+            font-size: 14px;
+          }
+
+          .top-right {
+            font-size: 14px;
+          }
+      }
+
+      @media only screen and (max-width: 767px) {
+          #bner {
+            width: 105% !important;
+            margin-top: -16.75% !important;
+            margin-left: -4.5% !important;
+          }
+
+          #logo {
+            height: 6.5%;
+          }
+
+          #hnm {
+            font-size: 1.5rem !important;
+          }
+
+          .card.mb-4.shadow-sm {
+            width: 175px !important;
+            height: 175px !important;
+          }
+
+          #specialImage {
+            width: 175px !important;
+            height: 175px !important;
+          }
+
+          #productImage {
+            width: 175px !important;
+            height: 150px !important;
+          }
+
+          #hotCards {
+            width: 80%;
+            margin: auto !important;
+          }
+
+          #btt {
+            margin-left: -40% !important;
+          }
+
+          .top-left {
+            font-size: 14px;
+          }
+
+          .top-right {
+            font-size: 14px;
+          }
+      }
+
+      @media only screen and (min-width: 300px) and (max-width: 510px) {
+        nav {
+          padding: 0px !important;
+        }
+
+        #bner {
+          width: 105% !important;
+          margin-top: -16.85% !important;
+          margin-left: -4.5% !important;
+        }
+
+        .nav-link {
+          font-size: 10px !important;
+          padding: 0px !important;
+        }
+
+        #navthingactive {
+          padding-left: 15px !important;
+        }
+
+        input {
+          height: 33px !important;
+          width: 175px !important;
+          margin: 7px !important;
+        }
+
+        .navbar-nav.mr-auto {
+          display: none;
+        }
+      }
+
+      @media only screen and (min-width: 511px) and (max-width: 730px) {
+        nav {
+          padding: 0px !important;
+        }
+
+        .nav-link {
+          font-size: 10px !important;
+          padding: 0px !important;
+        }
+
+        #navthingactive {
+          padding-left: 20px !important;
+        }
+
+        input {
+          height: 33px !important;
+          width: 175px !important;
+          margin: 7px !important;
+        }
+
+        .navbar-nav.mr-auto {
+          display: none;
+        }
+      }
+
+      @media only screen and (min-width: 500px) and (max-width: 549px) {
+        .nav-link {
+          font-size: 0.9rem !important;
+        }
+      }
+
+      @media only screen and (min-width: 550px) and (max-width: 730px) {
+        #navthingactive {
+          padding-left: 20px !important;
+        }
+
+        .nav-link {
+          font-size: 0.95rem !important;
+        }
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 800px) {
+          .card.mb-4.shadow-sm {
+            width: 175px !important;
+            height: 175px !important;
+          }
+
+          #specialImage {
+              width: 175px !important;
+              height: 175px !important;
+            }
+
+          #productImage {
+            width: 175px !important;
+            height: 150px !important;
+          }
+      }
+    </style>
+  </head>
+  <body onload="addHotDeals();">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-red" style="background-color: red;">
+      <a class="nav-link" id="navthingactive" href="index.html">Home</a>
+      <a class="nav-link" id="navthing" href="gaming.html">Gaming</a>
+      <a class="nav-link" id="navthing" href="sports.html">Sports</a>
+      <a class="nav-link" id="navthing" href="rap.html">Rap</a>
+      <a class="nav-link" id="navthing" href="vlog.html">Vloggers</a>
+
+      <ul class="navbar-nav mr-auto"></ul>
+        
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchbar" onkeyup="search();" style="width: 250px; height: calc(1.5em + .75rem + 2px);">
+    </nav><hr style="padding: 0px;">
+  </header>
+</div>
+
+<main role="main">
+
+  <section class="jumbotron text-center" id="logo" style="background-color: red; color: white; border-radius: 0px;">
+    <div class="container">
+      <h1 style="margin-top: -4% !important;">YouMerch</h1>
+      <p>Merch the way it should be.</p>
+
+      <img src="backgr.png" id="bner" style="float: left; margin-top: -31.275%; margin-left: -62%;">
+    </div>
+  </section>
+
+
+  <div class="album py-5 bg-light" style="background-color: red;">
+    <div class="container" id="hotcards">
+      <h1 id="hnm">Hot New Merch</h1><br>
+      <div class="row" id="row1"></div>
+    </div>
+  </div>
+
+</main>
+
+<div class="album py-5 bg-light">
+  <div class="container" id="fadeInView">
+    <h1 style="font-size: 3.0rem !important;">Results</h1><br>
+    <h4 id="topresult"></h4><br><br>
+    <div class="row" id="special1" style="padding-bottom: 100px;"></div>
+    <div class="row" id="special2"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var hotImages = ["https://cdn.shopify.com/s/files/1/0016/1975/5059/products/MR-BEAST-SPECTRUM-REFLECTIVE-CHAMPION-PACKABLE-ANORAK8_300x.jpg?v=1586534449", "https://cdn.shopify.com/s/files/1/0016/1975/5059/products/MRBEAST-BEAST-HEAD-SNAPBACK-BLACK-WHITE1_360x.jpg?v=1588259930", "https://cdn.shopify.com/s/files/1/2580/8892/products/SeekFaceMasksPDPV2-04_4480x.jpg?v=1587751914%204480w", "https://cdn.shopify.com/s/files/1/1026/0635/products/DUDE-PERFECT-OFFICIAL-CHAMPION-COLLABORATION-HOODIE2_2000x.jpg?v=1571955557%202000w", "https://cdn.shopify.com/s/files/1/0278/1046/3828/products/Lazar_LogoStack_PhoneCase_1_1000x.jpg?v=1570664248%201000w", "", "https://cdn.shopify.com/s/files/1/0009/7101/4205/products/OT_Wave_blue_3_1x1_9a319a6b-ba19-4c47-ab30-f74ca75a4a12_600x.jpg?v=1586983366", "https://img.represent.com/uploads/894767b4e48c489d282cd0fa0daa4f5f.jpg?auto=format&w=420"];
+  var specialHot = ["", "", "", "", "", "https://cdn.shopify.com/s/files/1/0122/6928/9531/products/Beanie_1_Zach_King_900x.jpg?v=1544517415", "", ""];
+  var hotPrices = ["$65.99", "$30.00", "$10.00", "$64.99", "$29.95", "$14.99", "$80.00", "$49.99"];
+  var hotLinks = ["https://shopmrbeast.com/products/beast-spectrum-reflective-champion-packable-anorak?_pos=2&_sid=d0cd4b310&_ss=r", "https://shopmrbeast.com/collections/featured-collection/products/beast-head-snapback", "https://www.seekdiscomfort.com/collections/face-masks/products/black-white-love-over-fear-mask", "https://dudeperfect.store/collections/new-arrivals/products/official-dude-perfect-x-champion-collaboration-hoodie-limited-edition", "https://shoplazar.com/products/lazarbeam-phone-case", "https://zachking.store/collections/hats/products/winter-beanie", "https://shop.overtime.tv/collections/hoodies-sweatshirts/products/ot-wave-hoodie-blue", "https://represent.com/fully-stacked-diamonds-pewdiepie-white/?variant=79110476&kw=store"];
+  var brands = ["Mr. Beast", "Mr. Beast", "Yes Theory", "Dude Perfect", "LazarBeam", "Zach King", "Overtime", "PewDiePie"];
+  var bgColors = ["242, 242, 242", "242, 242, 242", "255, 255, 255", "255, 255, 255", "", "", ""];
+  var textColors = ["105, 164, 234", "105, 164, 234", "0, 0, 0", "", "", "0, 0, 0", "0, 186, 220", "176, 235, 237"]
+
+  var hotImages1 = ["https://img.represent.com/uploads/c2caf88dc6065ee1b46def4b796ef616.jpg?auto=format&w=420", "https://img.represent.com/uploads/42985e8f929deab99ed18a20e1107493.jpg?auto=format&w=420", "", "", "https://cdn.shopify.com/s/files/1/2317/9611/products/Jogger_450x650.jpg?v=1543674110", "", "", ""];
+  var specialHot1 = ["", "", "https://cdn.shopify.com/s/files/1/0035/2770/4665/products/FINALNINJAWEBMOCKS_0014_Group6_1100x.jpg?v=1590101698", "https://cdn.shopify.com/s/files/1/1078/8124/products/bottomsR_540x.png?v=1590161300", "", "https://cdn.shopify.com/s/files/1/0095/9666/5956/products/Dan_TDM_Product_Shots-396_300x300@2x.jpg?v=1549559858", "https://cdn.shopify.com/s/files/1/0035/2770/4665/products/FINALNINJAWEBMOCKS_0001_Group2_1100x.jpg?v=1590101563", "https://cdn.shopify.com/s/files/1/0095/9666/5956/products/Untitled-1_51bb24c0-1780-4f88-abb0-d5ba3264f207_364x364@2x.jpg?v=1549282828"];
+  var hotPrices1 = ["$29.99", "$49.99", "$60.00", "$35.12", "$48.00", "$43.84", "$55.00", "$3.70"];
+  var hotLinks1 = ["https://represent.com/suka-blyad-beanie-pewdiepie/?variant=79166473&kw=store", "https://represent.com/simpnautica/?variant=79124899&kw=store", "https://teamninja.com/products/team-ninja-windbreaker", "https://www.sidemenclothing.com/collections/tracksuits1/products/xix-taped-black-tracksuit-bottoms?variant=29246471667800", "https://markiplier.com/collections/m-logo-tees/products/markiplier-joggers", "https://uk.dantdmshop.com/collections/official-dantdm-accessories/products/test02", "https://teamninja.com/products/ninja-fortnight-get-good-khed-hoodie", "https://uk.dantdmshop.com/collections/official-dantdm-accessories/products/dan-dtm-logo-circle-patch"];
+  var brands1 = ["PewDiePie", "PewDiePie", "Ninja", "KSI ", "Markiplier", "DanTDM", "Ninja", "DanTDM"];
+  var bgColors1 = ["", "", "", "", "", "", "", ""];
+  var textColors1 = ["", "", "", "0, 0, 0", "225, 177, 207", "97, 141, 214", "", "97, 141, 214"];
+
+  var hotImages2 = ["https://cdn.shopify.com/s/files/1/1026/0635/products/COMPOSITE_BASKETBALL1_2000x2000.jpg?v=1581952744", "https://cdn.shopify.com/s/files/1/1026/0635/products/DUDE-PERFECT-GREATEST-OF-ALL-TIME-IV-HOODIE3_2000x2000.jpg?v=1571439455", "https://cdn.shopify.com/s/files/1/0009/7101/4205/products/Dip_Dye_Hoodie_Blue_1_600x.png?v=1585493030", "https://cdn.shopify.com/s/files/1/0009/7101/4205/products/OT_Ninja_Headbands_White_1_600x.jpg?v=1575497107", "https://cdn.shopify.com/s/files/1/0027/3321/1707/products/FaceMask_product2_1600x.jpg?v=1588182321", "https://cdn.shopify.com/s/files/1/0027/3321/1707/products/RedShorts_1682_1600x.jpg?v=1573662714", "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTYbbDg4x-mPi1-2mJd1vdAqGgpt37eT6Itm6Fiqypub0YUkcqHvJpwrotKWjPzGVDUXvdZ-ogPeyySvZZZsYHCRqLL1XldKm1qhN72eiAGwdLQBdG2np-CSw&usqp=CAE", "https://cdn.shopify.com/s/files/1/0051/0977/6487/products/3Fdelay_3D1_26unique_3D0_26url_3Dhttps_253A_252F_252Fwww.theloyalist_36c1f36a-9265-433f-8e28-03fa0d5f9ff3_720x.png?v=1582226503"];
+  var specialHot2 = ["", "", "", "", "", "", "", ""];
+  var hotPrices2 = ["$39.99", "$59.99", "$75.00", "$12.00", "$15.00", "$19.99", "$16.99", "$42.00"];
+  var hotLinks2 = ["https://dudeperfect.store/collections/new-arrivals/products/dude-perfect-official-composite-basketball-black-green", "https://dudeperfect.store/collections/hoodies/products/greatest-of-all-time-iv-hoodie", "https://shop.overtime.tv/collections/hoodies-sweatshirts/products/ot-sierato-drip-dye-hoodie-1", "https://shop.overtime.tv/collections/hats-accessories/products/the-ninja-headband-white", "https://globalhooper.com/collections/globalhooper-collection/products/reflective-face-mask", "https://globalhooper.com/collections/globalhooper-collection/products/red-passion-driven-shorts", "https://www.artistshot.com/deestroying-ten-toes-down-ttd-merch-for-dark-cotton-drawstring-bags-p-18277258", "https://shop.whistlesports.com/collections/hoodies/products/pullover-hoodie-nodaysoff"];
+  var brands2 = ["Dude Perfect", "Dude Perfect", "Overtime", "Overtime", "Global Hooper", "Global Hooper", "Deestroying", "Whistle"];
+  var bgColors2 = ["", "", "", "", "233, 233, 233", "235, 235, 235", "", ""];
+  var textColors2 = ["53, 253, 245", "0, 0, 0", "0, 167, 210", "0, 0, 0","128,128,128", "", "0, 0, 0", ""];
+
+  var hotImages3 = ["https://cdn.shopify.com/s/files/1/0251/0752/9806/products/FLAT-LAY_2da5e0b6-bee8-44b6-be1c-e633ff7ce03b_2000x.jpg?v=1588188617", "https://cdn.shopify.com/s/files/1/0714/1079/products/david-dobrik-merch-david-dobrik-official-clickbait-hoodie-hoodie-14557345710189_600x.jpg?v=1586195940", "https://cdn.shopify.com/s/files/1/0718/8297/products/JoogSquad_ProductDevelopment_Mockup_5MillClubTee_Front_278f3bf2-4420-4801-8f75-eee41a5b6f33_2000x.jpg?v=1573660343", "https://cdn.shopify.com/s/files/1/2589/9734/products/CaseyNeistat_CN_Hoodie_Front_720x.jpg?v=1538612176", "https://vangogh.teespring.com/static.jpg?height=560&image_url=https%3A%2F%2Fteespring-pub-custom.s3.amazonaws.com%2Fb89_85253018_product_227_2661_back.png&padded=false&signature=AF%2BdGAugvlrSLrEcU82kxAlOGPOmaHDujORWfqOWAuI%3D&version=2020-06-01-04-45&width=480", "https://cdn.shopify.com/s/files/1/1887/1151/products/MAVERICK_SHORTS_2_FRONT_BLACK_STRING_1080x.jpg?v=1590115705", "https://cdn.shopify.com/s/files/1/0016/1975/5059/products/MR-BEAST-REFLECTIVE-BEAST-CHAMPION-JOGGERS1_2000x2000.jpg?v=1587583156", "https://cdn.shopify.com/s/files/1/0016/1975/5059/products/BEAST-32OZ-NARROW-MOUTH-NALGENE1_0e7493e7-6f08-49af-8966-6d890de80360_2000x2000.jpg?v=1587148908"];
+  var specialHot3 = ["", "", "", "", "", "", "", ""];
+  var hotPrices3 = ["$25.00", "$40.00", "$28.00", "$33.75", "$38.00", "Sold Out", "$55.00", "$25.00"];
+  var hotLinks3 = ["https://www.shanedawsonmerch.com/collections/shop-all/products/beam-me-up-tee", "https://fanjoy.co/collections/hoodies/products/david-dobrik-clickbait", "https://www.shopjoogsquad.com/collections/all/products/5-mill-tee", "https://shopcaseyneistat.com/products/cn-flag-hoodie", "https://teespring.com/rober_bomb_final_or_archive_19_new?adgroup=21058078865&aid=ts-boosted-src&cid=2661&device=c&gclid=CjwKCAjwztL2BRATEiwAvnALcnG3oIwNbxB4JWSCW0AUJAq8bEg6gQmlV5PMgyi72bGJCs1RX0RHkxoCcQQQAvD_BwE&matchtype=b&network=g&pid=227&tsmac=store&tsmic=markrober&utm_campaign=296571425&utm_content=94334850665&utm_medium=cpc&utm_source=google", "https://maverickclothing.com/collections/home-page/products/mav-shirt-8", "https://shopmrbeast.com/collections/featured-collection/products/reflective-beast-champion-joggers", "https://shopmrbeast.com/collections/accessories/products/beast-32oz-narrow-mouth-nalgene"];
+  var brands3 = ["Shane Dawson", "David Dobrik", "JoogSquad", "Casey Neistat", "Mark Rober", "Logan Paul", "Mr. Beast", "Mr. Beast"];
+  var bgColors3 = ["234, 234, 234", "", "", "", "246, 246, 248", "220, 221, 226", "242, 242, 242", "242, 242, 242"];
+  var textColors3 = ["122, 134, 155", "150, 110, 116", "94,86,49", "138,43,226", "46,48,90", "0, 0, 0", "0,0,0", "95,158,160"];
+
+  var hotImages4 = ["https://merchbar.imgix.net/product/0/7957/4406979199089/XEXfJcXRv1-2_9c9e23ec-32ca-4acd-98ed-074b6af91ab4.png?w=640&h=640", "https://merchbar.imgix.net/product/105/6519/4352790757458/Q1h8WgsV25w_bd5dab7c-8d83-46ff-b5df-608381a72791.png?w=640&h=640", "https://merchbar.imgix.net/product/70/7233/1116761/YfK13hwTqrsocks_1.png?w=640&h=640", "https://merchbar.imgix.net/product/0/7209/4345906331684/bfXvFlhttrapTEE-1.png?w=640&h=640", "https://merchbar.imgix.net/product/70/7848/1121142/Vo4uyX4Droddyblacknewhoodieback.png?w=640&h=640", "", "https://img.secure.cdn2.wmgecom.com/media/catalog/product/cache/864/image/600x/9df78eab33525d08d6e5fb8d27136e95/1/_/1_13_13.jpg", "https://static.musictoday.com/store/bands/4365/product_600/X9CMYT10.jpg"];
+  var specialHot4 = ["", "", "", "", "", "https://merchbar.imgix.net/product/43/8130/x9ctgn09/MVgm1MqLX9CTGN09-01.JPG?w=640&h=640", "", ""];
+  var hotPrices4 = ["$31.50", "$26.95", "$20.00", "$25.00", "$50.00", "$45.00", "$25.00", "$65.00"];
+  var hotLinks4 = ["https://www.merchbar.com/r-b-hiphop-rap/rich-the-kid/rich-the-kid-red-splatter-t-shirt", "https://www.merchbar.com/r-b-hiphop-rap/lil-yachty/lil-yachty-long-sleeve-shirt-king-boat-lil-yachty-long-sleeve-shirt", "https://www.merchbar.com/r-b-hiphop-rap/quando-rondo/quando-rondo-qr-nh-initial-socks", "https://www.merchbar.com/vinyl-records/fetty-wap/fetty-wap-trap-tee", "https://www.merchbar.com/r-b-hiphop-rap/roddy-ricch/roddy-ricch-please-excuse-me-hoodie-black", "https://www.merchbar.com/r-b-hiphop-rap/gunna/gunna-ombre-birth-chart-t-shirt", "https://store.warnermusic.com/atlantic-records/artists/gucci-mane/evil-caricature-hat.html", "https://youngthugstore.com/product/X9CMYT10/2020-stay-home-tour-green-hoodie?cp=null"];
+  var brands4 = ["Rich The Kid", "Lil Yachty", "Quando Rondo", "Fetty Wap", "Roddy Ricch", "Gunna", "Gucci Mane", "Young Thug"];
+  var bgColors4 = ["", "", "", "", "", "", "", ""];
+  var textColors4 = ["220,20,60", "212,175,55", "30,144,255", "135,136,140", "0,0,0", "126,72,94", "", "154, 210, 130"];
+
+  function addHotDeals() {
+    $("#fadeInView").hide();
+
+    for (var i = 0; i < hotPrices.length; i++) {
+      var url = hotImages[i];
+
+      if (url == "") {
+        url = specialHot[i];
+
+        var price = hotPrices[i];
+        var brand = brands[i];
+        var bgColor = bgColors[i];
+        var textColor = textColors[i];
+
+        var code = `<a href="` + hotLinks[i] + `"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + bgColor + `);">
+                <div class="top-right"><strong>` + price + `</strong></div>
+                <div class="top-left" style="color: rgba(` + textColor + `);"><strong>` + brand + `</strong></div>
+                <img src="` + url + `" id="specialImage">
+              </div>
+          </div></a>`;
+
+        if (brand == "PewDiePie") {
+          code = `<a href="` + hotLinks[i] + `"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + bgColor + `);">
+                <div class="top-right"><strong>` + price + `</strong></div>
+                <div class="demo rainbow"><strong>` + brand + `</strong></div>
+                <img src="` + url + `" id="specialImage">
+              </div>
+          </div></a>`;
+        }
+
+        if (i < 4) {
+          document.getElementById('row1').innerHTML = document.getElementById('row1').innerHTML + code;
+        } else {
+          document.getElementById('row1').innerHTML = document.getElementById('row1').innerHTML + code
+        }
+      } else {
+        var price = hotPrices[i];
+        var brand = brands[i];
+        var bgColor = bgColors[i];
+        var textColor = textColors[i];
+
+        var code = `<a href="` + hotLinks[i] + `"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + bgColor + `);">
+                <div class="top-right"><strong>` + price + `</strong></div>
+                <div class="top-left" style="color: rgba(` + textColor + `);"><strong>` + brand + `</strong></div>
+                <img src="` + url + `" id="productImage">
+              </div>
+          </div></a>`;
+
+        if (brand == "PewDiePie") {
+          code = `<a href="` + hotLinks[i] + `"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + bgColor + `);">
+                <div class="top-right"><strong>` + price + `</strong></div>
+                <div class="demo rainbow"><strong>` + brand + `</strong></div>
+                <img style="border-radius: 15px;" src="` + url + `" id="specialImage">
+              </div>
+          </div></a>`;
+        }
+
+        if (i < 4) {
+          document.getElementById('row1').innerHTML = document.getElementById('row1').innerHTML + code;
+        } else {
+          document.getElementById('row1').innerHTML = document.getElementById('row1').innerHTML + code
+        }
+      }
+    }
+  }
+
+  if ($(window).width() <= 830) {
+    var sheet = window.document.styleSheets[1];
+    sheet.removeRule(0);
+  }
+
+  $("input#searchbar").hover(function(){
+    $("input#searchbar").focus();
+    $(this).css();
+    }, function(){
+  });
+
+  $('input#searchbar').on('search', function () {
+      search();
+  });
+
+  function getAllIndexes(arr, val) {
+      var indexes = [], i = -1;
+      while ((i = arr.indexOf(val, i+1)) != -1){
+          indexes.push(i);
+      }
+      return indexes;
+  }
+
+  function addForIndexes(arr, a1, a2, a3, a4, a5, a6, a7) {
+    for (var i = 0; i < arr.length; i++) {
+      var num = arr[i];
+
+      if (num != null) {
+        var imageURL = "";
+        var isSpecial = false;
+
+        if (a1[num] != "") {
+          imageURL = a1[num];
+        } else {
+          isSpecial = true;
+          imageURL = a2[num];
+        }
+
+        var theItem = [imageURL, a3[num], a4[num], a5[num], a6[num], a7[num]];
+
+        var code = `<a href="` + theItem[2] + `"><div class="col-md-4">
+            <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + theItem[4] + `);">
+              <div class="top-right"><strong>` + theItem[1] + `</strong></div>
+              <div class="top-left" style="color: rgba(` + theItem[5] + `);"><strong>` + theItem[3] + `</strong></div>
+              <img src="` + theItem[0] + `" id="productImage">
+            </div>
+        </div></a>`;
+
+        if (theItem[3] == "PewDiePie") {
+          code = `<a href="` + theItem[2] + `"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + theItem[4] + `);">
+                <div class="top-right"><strong>` + theItem[1] + `</strong></div>
+                <div class="demo rainbow"><strong>` + theItem[3] + `</strong></div>
+                <img style="border-radius: 15px;" src="` + theItem[0] + `" id="specialImage">
+              </div>
+          </div></a>`;
+        }
+
+        if (isSpecial) {
+          code = `<a href="` + theItem[2] + `"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="height: 250px; width: 250px; background-color: rgba(` + theItem[4] + `);">
+                <div class="top-right"><strong>` + theItem[1] + `</strong></div>
+                <div class="top-left" style="color: rgba(` + theItem[5] + `);"><strong>` + theItem[3] + `</strong></div>
+                <img src="` + theItem[0] + `" id="specialImage">
+              </div>
+          </div></a>`;
+        }
+
+        document.getElementById('special1').innerHTML = document.getElementById('special1').innerHTML + code;
+      }
+    }
+  }
+
+  function addItemFromBrandToResults(brand) {
+    var indexes1 = getAllIndexes(brands, brand);
+    var indexes2 = getAllIndexes(brands1, brand);
+    var indexes3 = getAllIndexes(brands2, brand);
+    var indexes4 = getAllIndexes(brands3, brand);
+    var indexes5 = getAllIndexes(brands4, brand);
+
+    addForIndexes(indexes1, hotImages, specialHot, hotPrices, hotLinks, brands, bgColors, textColors);
+    addForIndexes(indexes2, hotImages1, specialHot1, hotPrices1, hotLinks1, brands1, bgColors1, textColors1);
+    addForIndexes(indexes3, hotImages2, specialHot2, hotPrices2, hotLinks2, brands2, bgColors2, textColors2);
+    addForIndexes(indexes4, hotImages3, specialHot3, hotPrices3, hotLinks3, brands3, bgColors3, textColors3);
+    addForIndexes(indexes5, hotImages4, specialHot4, hotPrices4, hotLinks4, brands4, bgColors4, textColors4);
+  }
+
+  function contains(s1, s2) {
+    return (gs1.indexOf(gs2) != -1);
+  }
+
+  function search() {
+    $("#fadeInView").show();
+    $("#hotcards").hide();
+    $("main").hide();
+
+    document.getElementById('special1').innerHTML = "";
+
+    let searchText = document.getElementById("searchbar").value.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+
+    var closestBrand1 = brands[brands.findIndex(x => contains(x.toLowerCase().replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''), searchText.toLowerCase().trim()) && searchText != "")];
+    var closestBrand2 = brands1[brands1.findIndex(x => contains(x.toLowerCase().replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''), searchText.toLowerCase().trim()) && searchText != "")];
+    var closestBrand3 = brands2[brands2.findIndex(x => contains(x.toLowerCase().replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''), searchText.toLowerCase().trim()) && searchText != "")];
+    var closestBrand4 = brands3[brands3.findIndex(x => contains(x.toLowerCase().replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''), searchText.toLowerCase().trim()) && searchText != "")];
+    var closestBrand5 = brands4[brands4.findIndex(x => contains(x.toLowerCase().replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''), searchText.toLowerCase().trim()) && searchText != "")];
+
+    var badResults = [closestBrand1, closestBrand2, closestBrand3, closestBrand4, closestBrand5];
+    var results = [];
+
+    $.each(badResults, function(i, el){
+        if($.inArray(el, results) === -1) results.push(el);
+    });
+
+    var c = 0;
+
+    for (var i = 0; i < results.length; i++) {
+      var r = results[i];
+
+      if (r != null) {
+        addItemFromBrandToResults(r);
+        c = c + 1;
+      }
+    }
+
+    if (searchText == "" || c == 0) {
+      document.getElementById('topresult').innerHTML = "No Results Found";
+    } else {
+      document.getElementById('topresult').innerHTML = searchText;
+    }
+  }
+
+  function contains(s1, s2) {
+    return (s1.indexOf(s2) != -1);
+  }
+
+  function fixStuff() {
+    if ($(document).width() >= 767) {
+      $("#logo").css("height", "8.8%");
+    } else if ($(document).width() <= 560) {
+      $("#logo").css("height", "6.4%");
+    } else {
+      $("#logo").css("height", "6.55%");
+    }
+
+    console.log($(document).width());
+  }
+
+  window.onresize = fixStuff;
+</script>
+
+<footer class="text-muted" style="bottom: 0; position: absolute; width: 100%; background-color: red;">
+  <div class="container">
+    <p class="float-right">
+      <a href="#" id="btt" style="color: white; border-radius: 10px; border: 1px solid white; padding: 10px;">Back to top</a>
+    </p>
+    <p style="color: white;">© Ethan Goodhart, Graham Goodhart</p>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+      var zoom = Math.ceil(((window.outerWidth - 10) / window.innerWidth) * 100) - 2;
+      var fix  = 100 - zoom
+
+      document.body.style.zoom = (100 + fix) + "%";
+
+      console.log("isZoom = " + (zoom != 100));
+      console.log("Zoom Amount = " + zoom + "%");
+    </script>
+
+</body></html>
